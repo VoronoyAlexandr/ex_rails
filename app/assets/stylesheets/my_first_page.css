@@ -1,0 +1,16 @@
+#hello_world{
+    color: blue;
+    background-color: rgba(255,0,0,0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+.hrefs{
+    color:red;
+}
+.subgroup{
+    color:blue;
+}
+
+p {
+    color:green;
+}
