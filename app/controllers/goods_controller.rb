@@ -1,7 +1,7 @@
 class GoodsController < ApplicationController
 
   def new
-
+    @good = Good.new
   end
 
   def index
@@ -16,14 +16,26 @@ class GoodsController < ApplicationController
 
   def create
 
+    @good = Good.new
+    @good.code = params[:good][:code]
+    @good.name = params[:good][:name]
+    @good.save
+
+    redirect_to goods_path
+
   end
 
   def edit
-
+  @good = Good.find(params[:id])
   end
 
   def update
+    @good = Good.find(params[:id])
+    @good.code = params[:good][:code]
+    @good.name = params[:good][:name]
+    @good.save
 
+    redirect_to goods_path
   end
 
   def destroy
